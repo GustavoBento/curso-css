@@ -145,4 +145,11 @@
         left: 247px;
     }
 
+    .rodape__container {
+        display: flex;
+        margin-left: 80px;
+        
+        width: auto;
+    }
+
 }
