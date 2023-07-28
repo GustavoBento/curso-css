@@ -28,12 +28,6 @@
     height: 100%;
 }
 
-.menu__lista:nth-child(2),
-.menu__lista:nth-child(3),
-.menu__lista:nth-child(4) {
-    display: none;
-}
-
 .menu__lista li {
     align-self: center;
 }
@@ -41,6 +35,13 @@
 .menu__itens {
     display: flex;
     flex-direction: column;
+    gap: 5px;
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
 }
 
 /* SUPERIOR SEÇÃO */
@@ -51,8 +52,8 @@
     white-space: nowrap;
     overflow: scroll;
     gap: 15px;
+    width: auto;
 }
-
 
 /* RODAPE */
 
@@ -71,12 +72,13 @@
         display: block;
     }
 
+    /* MENU */
+
     .menu__container {
         left: 0%;
         height: auto;
         width: 74px;
-        top: 80px;
-        
+        top: 80px;      
     }
 
     .menu__lista {
@@ -92,4 +94,55 @@
     .rodape__container {
         justify-content: space-between;
     }
+}
+
+@media(min-width: 1240px) {
+    /* MENU */
+    .menu__container {
+        width: 239px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: flex;
+    }
+
+    .menu__lista {
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+
+    .menu__itens {
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .jogos {
+        order: 3;
+    }
+
+    .filmes {
+        order: 2;
+    }
+
+    .premium {
+        order: 1;
+    }
+
+    .maispagina {
+        order: 4;
+    }
+
+    .superior__secao__container {
+        left: 247px;
+    }
+
 }
